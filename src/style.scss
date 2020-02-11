@@ -1,0 +1,46 @@
+.box {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  float: left;
+  margin: 5px;
+}
+
+.heart, .yellow, .blue {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;  
+  transition: opacity 3s;
+}
+
+.heart {
+  font-size: 300px;
+  color: #1ef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.yellow {
+  background: repeating-linear-gradient(transparent, transparent 10px, #fe1 10px, #fe1 20px);
+  z-index: 2;
+}
+
+.blue {
+  background: repeating-linear-gradient(#13e, #13e 10px, transparent 10px, transparent 20px);
+}
+
+
+.box.second .yellow {
+  z-index: 0;
+}
+
+.box.second .blue {
+  z-index: 2;
+}
+
+body:hover .box .yellow, body:hover .box .blue {
+  opacity: 0;
+}
+
